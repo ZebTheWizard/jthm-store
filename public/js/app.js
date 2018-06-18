@@ -13897,6 +13897,10 @@ var app = new Vue({
   el: '#app'
 });
 
+window.addedToCart = function (data, res) {
+  $('#cart-counter').html(res.itemCount);
+};
+
 /***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -13962,7 +13966,11 @@ if (token) {
 window.Sniddl = __webpack_require__(36);
 
 Sniddl.init('.linkable', {
-  addCss: true
+  addCss: true,
+  headers: {
+    'Content-Type': 'application/json',
+    'X-CSRF-TOKEN': token.content
+  }
 });
 
 /***/ }),

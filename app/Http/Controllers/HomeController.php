@@ -23,9 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-      return view('home', [
-        "updates" => \App\Update::get(),
-        "socials" => \App\Social::get(),
-      ]);
+        return view('home');
     }
 }

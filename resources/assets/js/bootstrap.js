@@ -59,5 +59,9 @@ if (token) {
 window.Sniddl = require('sniddl-ajax')
 
 Sniddl.init('.linkable', {
-  addCss: true
+  addCss: true,
+  headers: {
+    'Content-Type': 'application/json',
+    'X-CSRF-TOKEN': token.content
+  }
 })

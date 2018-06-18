@@ -20,3 +20,7 @@ Vue.component('editor', require('./components/Editor.vue'));
 const app = new Vue({
     el: '#app'
 });
+
+window.addedToCart = function (data, res) {
+  $('#cart-counter').html(res.itemCount)
+}

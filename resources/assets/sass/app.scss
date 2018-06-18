@@ -9,11 +9,12 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background: #1c1c1c; /* Old browsers */
-  background: -moz-linear-gradient(45deg, #1c1c1c 0%, #2d2d2d 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #1c1c1c 0%,#2d2d2d 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #1c1c1c 0%,#2d2d2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1c1c', endColorstr='#2d2d2d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #eceeef;
+  // background: #1c1c1c; /* Old browsers */
+  // background: -moz-linear-gradient(45deg, #1c1c1c 0%, #2d2d2d 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(45deg, #1c1c1c 0%,#2d2d2d 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(45deg, #1c1c1c 0%,#2d2d2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1c1c', endColorstr='#2d2d2d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   min-height: 100vh;
   width: 100%;
 }
@@ -22,12 +23,46 @@ main,#app {
   min-height: 100vh;
 }
 
+.sniddl-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+}
+.has-nav {
+  padding-top: 50px !important;
+}
+.search {
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    width: 100%;
+}
 .site-title {
   text-align: center;
   font-size: 4rem;
   letter-spacing: -0.2rem;
   font-style: italic;
   color: white;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #505050;
+    border: 1px solid #505050;
+    border-radius: 4px;
+    &:hover{
+      cursor: pointer;
+      background: #505050;
+      text-decoration: none;
+      color: white;
+    }
 }
 
 .navbar-laravel {
@@ -37,7 +72,7 @@ main,#app {
 
 
 footer {
-  background: rgba(68, 68, 68, 0.1);
+  background: white;
 }
 
 
@@ -109,4 +144,20 @@ footer {
         }
       }
   }
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  &[aria-expanded=true] i:before {
+    content: "\f078"
+  }
+}
+
+.nav-icon .fa-layers-counter {
+  top: 0.3rem;
+  right: 0.3rem;
+  font-size: 2.3em;
 }

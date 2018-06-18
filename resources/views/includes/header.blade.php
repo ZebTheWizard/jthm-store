@@ -11,5 +11,7 @@
 <script src="{{ asset('js/app.js') }}" defer></script>
 
 <!-- Styles -->
-<link href="{{ url('/fa/web-fonts-with-css/css/fontawesome-all.min.css') }}" rel="stylesheet"></link>
+<!-- <link href="{{ url('/fa/web-fonts-with-css/css/fontawesome-all.min.css') }}" rel="stylesheet"></link> -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+<script defer src="/fa/svg-with-js/js/fontawesome-all.min.js" charset="utf-8"></script>
